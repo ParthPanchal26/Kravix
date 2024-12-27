@@ -3,7 +3,7 @@ import './App.css'
 import { useDispatch } from 'react-redux';
 import authService from './appwrite/auth'
 import { login, logout } from './features/authSlice/authSlice';
-import { Header, Footer } from '../src/components/index'
+import { Header, Footer, PostCard, Select, Input, Button, Login, Signup } from '../src/components/index.js'
 import { Outlet } from 'react-router-dom';
 
 function App() {
@@ -20,8 +20,6 @@ function App() {
       })
       .finally(() => setLoading(false))
   }, [])
-
-    // 4:50
 
 
   return !loading ? (
