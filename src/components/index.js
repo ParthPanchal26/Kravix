@@ -11,5 +11,6 @@ import Login from './Login.jsx';
 import Signup from './SignUp.jsx';
 import RTE from './RTE.jsx';
 import AuthLayout from './AuthLayout.jsx';
-import PostForm from './PostCard.jsx';
+import PostForm from './post-form/PostForm.jsx';
+
 export { AuthLayout, PostForm, Header, Footer, Container, Logo, LogoutBtn, Select, Input, PostCard, Button, Login, Signup, RTE };
