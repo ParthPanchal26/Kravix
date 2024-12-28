@@ -9,5 +9,7 @@ import PostCard from './PostCard.jsx';
 import Button from './Button.jsx';
 import Login from './Login.jsx';
 import Signup from './SignUp.jsx';
-
-export { Header, Footer, Container, Logo, LogoutBtn, Select, Input, PostCard, Button, Login, Signup };
+import RTE from './RTE.jsx';
+import AuthLayout from './AuthLayout.jsx';
+import PostForm from './PostCard.jsx';
+export { AuthLayout, PostForm, Header, Footer, Container, Logo, LogoutBtn, Select, Input, PostCard, Button, Login, Signup, RTE };
