@@ -31,8 +31,8 @@ const Login = () => {
     }
 
     return (
-        <div className="flex item-center justify-center w-full mt-10 mb-10">
-            <div className={`mx-auto w-full max-w-lg bg-gray-300 rounded-xl p-10 border border-black/10`}>
+        <div className="p-4 flex item-center justify-center w-full mt-8 mb-10">
+            <div className={`mx-auto w-full max-w-lg bg-gray-800 text-slate-200 rounded-xl p-10 border`}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width='100%' />
@@ -41,9 +41,9 @@ const Login = () => {
                 <h2 className="text-center text-2xl font-bold leading-tight">
                     Sign in to your account
                 </h2>
-                <p className="mt-2 text-center text-base text-black/60">
+                <p className="mt-2 text-center text-base text-slate-200/60">
                     Don&apos;t have account yet?&nbsp;
-                    <Link to='/signup' className='font-medium text-primary transition-all duration-200 hover:underline'>
+                    <Link to='/signup' className='text-slate-300 font-medium text-primary transition-all duration-200 hover:underline'>
                         Sign Up
                     </Link>
                 </p>

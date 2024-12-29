@@ -17,15 +17,15 @@ const Home = () => {
 
     const userData = useSelector((state) => state.auth.userData);
 
-    
+
     if (!userData) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
+                            <h1 className="text-2xl font-bold text-white hover:text-gray-500">
+                                Kindly login to read articles
                             </h1>
                         </div>
                     </div>
