@@ -3,6 +3,7 @@ import { Client, Account, ID } from 'appwrite';
 
 export class AuthService {
     client = new Client();
+    account;
 
     constructor() {
         this.client
@@ -15,8 +16,12 @@ export class AuthService {
     async createAccount({ email, password, name }) {
         const userAccount = await this.account.create(ID.unique(), email, password, name);
 
-        if (userAccount) return this.login(email, password);
-        else return userAccount;
+        if (userAccount) {
+            return this.login({ email, password });
+            // return this.login( email, password ); I am a genius 
+        } else {
+            return userAccount;
+        }
     }
 
     async login({ email, password }) {
