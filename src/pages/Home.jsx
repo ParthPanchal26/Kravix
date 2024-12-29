@@ -17,7 +17,7 @@ const Home = () => {
 
     const userData = useSelector((state) => state.auth.userData);
 
-
+    
     if (!userData) {
         return (
             <div className="w-full py-8 mt-4 text-center">
@@ -32,7 +32,9 @@ const Home = () => {
                 </Container>
             </div>
         )
-    } else if(posts.length === 0) {
+    }
+
+    if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
@@ -47,6 +49,7 @@ const Home = () => {
             </div>
         )
     }
+
     return (
         <div className='w-full py-8'>
             <Container>
@@ -61,5 +64,6 @@ const Home = () => {
         </div>
     )
 }
+
 
 export default Home

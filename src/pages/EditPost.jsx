@@ -1,15 +1,16 @@
-import { useState, useParams, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import appwriteService from '../appwrite/config'
 import { Container, PostForm } from '../components/index'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const EditPost = () => {
 
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(null);
     const { slug } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
+        console.log(slug)
         if(slug) {
             appwriteService.getPost(slug).then((post) => {
                 if(post) {
