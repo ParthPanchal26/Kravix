@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import authService from '../appwrite/auth'
 import { Link, useNavigate } from 'react-router-dom'
-import { login } from '../features/authSlice/authSlice'
+import { login as authLogin } from '../features/authSlice/authSlice'
 import { Input, Logo, Button } from './index'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
@@ -16,13 +16,14 @@ const Signup = () => {
     const create = async (data) => {
         setError("")
         try {
-            const userData = await authService.createAccount(data)
-            if (userData) {
+            const user_Data = await authService.createAccount(data)
+            if (user_Data) {
                 const userData = await authService.getCurrentUser()
-                if (userData) dispatch(login(userData));
-                navigate("/")
+                if (userData) dispatch(authLogin(userData))
+                navigate('/')
             }
         } catch (error) {
+            console.error('Error:', error)
             setError(error.message)
         }
     };
@@ -47,7 +48,7 @@ const Signup = () => {
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-                <form onSubmit={handleSubmit(create)}>
+                <form className='mt-8' onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
                         <Input
                             label="Full Name: "
@@ -56,18 +57,19 @@ const Signup = () => {
                                 required: true,
                             })}
                         />
+
                         <Input
                             label="Email: "
-                            placeholder="Enter your email"
+                            placeholder="Enter your email: "
                             type="email"
                             {...register("email", {
                                 required: true,
                                 validate: {
-                                    matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
-                                        "Email address must be a valid address",
+                                    matchPattern: (value) => /^([\w._-]+)?\w+@[\w-]+(\.\w+){1,}$/igm.test(value) || "Invalid Email"
                                 }
                             })}
                         />
+
                         <Input
                             label="Password: "
                             type="password"

@@ -3,7 +3,7 @@ import './App.css'
 import { useDispatch } from 'react-redux';
 import authService from './appwrite/auth'
 import { login, logout } from './features/authSlice/authSlice';
-import { Header, Footer, PostCard, Select, Input, Button, Login, Signup, RTE } from '../src/components/index.js'
+import { Header, Footer} from '../src/components/index.js'
 import { Outlet } from 'react-router-dom';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         if (userData) dispatch(login({ userData }));
         else dispatch(logout());
       })
+      .catch(() => setLoading(false))
       .finally(() => setLoading(false))
   }, [])
 
