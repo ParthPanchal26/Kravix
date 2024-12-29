@@ -1,7 +1,9 @@
-const Logo = ({width = '100px'}) => {
-  return (
-    <div>Logo</div>
-  )
-}
+import kravixLogo from '../assets/kravix.png';
 
-export default Logo
+const Logo = ({ width = '100px' }) => {
+  return (
+    <img src={kravixLogo} alt="Kravix" style={{ width }} />
+  );
+};
+
+export default Logo;

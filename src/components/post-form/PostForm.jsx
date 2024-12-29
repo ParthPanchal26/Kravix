@@ -42,8 +42,10 @@ const PostForm = ({ post }) => {
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
 
+                const userId = userData.userData.$id;
+                const dbPost = await appwriteService.createPost({ ...data, userId });
+                
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }
@@ -52,14 +54,16 @@ const PostForm = ({ post }) => {
     };
 
     const slugTransform = useCallback((value) => {
-        if (value && typeof value === 'string') return value.trim().toLowerCase().replace(/^[a-zA-Z\d\s]+/g, '-').replace(/\s/g, '-')
+        if (value && typeof value === 'string')
+            return value.trim().toLowerCase().replace(/[^a-zA-Z\d\s]+/g, "-").replace(/\s/g, "-")
+
         return ''
     }, [])
 
     useEffect(() => {
         const subscription = watch((value, { name }) => {
             if (name === 'title') {
-                setValue('slug', slugTransform(value.title, { shouldValidate: true }))
+                setValue('slug', slugTransform(value.title), { shouldValidate: true })
             }
         })
         return () => {
