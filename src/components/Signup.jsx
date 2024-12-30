@@ -19,8 +19,10 @@ const Signup = () => {
             const user_Data = await authService.createAccount(data)
             if (user_Data) {
                 const userData = await authService.getCurrentUser()
-                if (userData) dispatch(authLogin(userData))
-                navigate('/')
+                if (userData) {
+                    dispatch(authLogin(userData))
+                    navigate('/kravix/')
+                }
             }
         } catch (error) {
             console.error('Error:', error)
@@ -40,7 +42,7 @@ const Signup = () => {
                 <p className="mt-2 text-center text-base text-slate-200/60">
                     Already have an account?&nbsp;
                     <Link
-                        to="/login"
+                        to="/kravix/login/"
                         className="text-slate-200 font-medium text-primary transition-all duration-200 hover:underline"
                     >
                         Sign In

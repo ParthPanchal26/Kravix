@@ -27,7 +27,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-gray-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Features
                                     </Link>
@@ -35,7 +35,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Pricing
                                     </Link>
@@ -43,7 +43,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Affiliate Program
                                     </Link>
@@ -51,7 +51,7 @@ function Footer() {
                                 <li>
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Press Kit
                                     </Link>
@@ -68,7 +68,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Account
                                     </Link>
@@ -76,7 +76,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Help
                                     </Link>
@@ -84,7 +84,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Contact Us
                                     </Link>
@@ -92,7 +92,7 @@ function Footer() {
                                 <li>
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Customer Support
                                     </Link>
@@ -109,7 +109,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Terms &amp; Conditions
                                     </Link>
@@ -117,7 +117,7 @@ function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Privacy Policy
                                     </Link>
@@ -125,7 +125,7 @@ function Footer() {
                                 <li>
                                     <Link
                                         className=" text-base font-medium text-slate-300 hover:text-slate-100"
-                                        to="/"
+                                        to="/kravix/"
                                     >
                                         Licensing
                                     </Link>

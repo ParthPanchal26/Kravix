@@ -1,3 +1,3 @@
-# Kravix
+# kravix
 
-### Kravix is blogging platform for sharing your articles with modern experience.
+### kravix is blogging platform for sharing your articles with modern experience.

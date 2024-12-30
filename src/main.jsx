@@ -14,18 +14,18 @@ import Post from "./pages/Post";
 import AllPosts from "./pages/AllPosts";
 
 const isGitHubPages = import.meta.env.VITE_NODE_ENV === "production";
-const basePath = isGitHubPages ? "/Kravix" : "";
+const basePath = "/kravix";
 const router = createBrowserRouter([
     {
-        path: basePath + "/",
+        path: "/kravix/",
         element: <App />,
         children: [
             {
-                path: basePath + "/",
+                path: "/kravix/",
                 element: <Home />,
             },
             {
-                path: basePath + "/login",
+                path: "/kravix/login",
                 element: (
                     <AuthLayout authentication={false}>
                         <Login />
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
                 ),
             },
             {
-                path: basePath + "/signup",
+                path: "/kravix/signup",
                 element: (
                     <AuthLayout authentication={false}>
                         <Signup />
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
                 ),
             },
             {
-                path: basePath + "/all-posts",
+                path: "/kravix/all-posts",
                 element: (
                     <AuthLayout authentication>
                         {" "}
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
                 ),
             },
             {
-                path: basePath + "/add-post",
+                path: "/kravix/add-post",
                 element: (
                     <AuthLayout authentication>
                         {" "}
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
                 ),
             },
             {
-                path: basePath + "/edit-post/:slug",
+                path: "/kravix/edit-post/:slug",
                 element: (
                     <AuthLayout authentication>
                         {" "}
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
                 ),
             },
             {
-                path: basePath + "/post/:slug",
+                path: "/kravix/post/:slug",
                 element: <Post />,
             },
         ],

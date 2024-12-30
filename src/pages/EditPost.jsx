@@ -18,7 +18,7 @@ const EditPost = () => {
                 }   
             })
         } else {
-            navigate('/')
+            navigate('/kravix/')
         }
     }, [slug, navigate])
 

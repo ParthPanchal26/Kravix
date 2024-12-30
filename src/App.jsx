@@ -5,6 +5,10 @@ import authService from './appwrite/auth'
 import { login, logout } from './features/authSlice/authSlice';
 import { Header, Footer } from '../src/components/index.js'
 import { Outlet } from 'react-router-dom';
+import AllPosts from './pages/AllPosts.jsx';
+import Home from './pages/Home.jsx';
+import Post from './pages/Post.jsx';
+import AddPost from './pages/AddPost.jsx';
 
 function App() {
 
@@ -15,8 +19,8 @@ function App() {
   useEffect(() => {
     authService.getCurrentUser()
       .then((userData) => {
-        if (userData) dispatch(login({ userData }));
-        else dispatch(logout());
+        if (userData) { dispatch(login({ userData })) }
+        else { dispatch(logout()) }
       })
       .catch(() => setLoading(false))
       .finally(() => setLoading(false))

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ParthPanchal26.github.io/Kravix",
+  "homepage": "https://ParthPanchal26.github.io/kravix",
   "name": "kravix",
   "private": true,
   "version": "3.0.0",
@@ -21,7 +21,8 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "tailwind-scrollbar": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

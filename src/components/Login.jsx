@@ -22,8 +22,10 @@ const Login = () => {
 
             if (session) {
                 const userData = await authService.getCurrentUser()
-                if (userData) dispatch(authLogin(userData))
-                navigate('/')
+                if (userData) {
+                    dispatch(authLogin(userData))
+                    navigate('/kravix/')
+                }
             }
         } catch (error) {
             setError(error.message)
@@ -43,7 +45,7 @@ const Login = () => {
                 </h2>
                 <p className="mt-2 text-center text-base text-slate-200/60">
                     Don&apos;t have account yet?&nbsp;
-                    <Link to='/signup' className='text-slate-300 font-medium text-primary transition-all duration-200 hover:underline'>
+                    <Link to='/kravix/signup/' className='text-slate-300 font-medium text-primary transition-all duration-200 hover:underline'>
                         Sign Up
                     </Link>
                 </p>

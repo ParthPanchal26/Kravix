@@ -34,19 +34,21 @@ const PostForm = ({ post }) => {
             });
 
             if (dbPost) {
-                navigate(`/post/${dbPost.$id}`);
+                navigate(`/kravix/post/${dbPost.$id}`);
             }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
 
             if (file) {
+                console.log(userData)
+                console.log(userData.userData.$id);
                 const fileId = file.$id;
                 data.featuredImage = fileId;
-                const userId = userData.$id;
+                const userId = userData.userData.$id;
                 const dbPost = await appwriteService.createPost({ ...data, userId });
 
                 if (dbPost) {
-                    navigate(`/post/${dbPost.$id}`);
+                    navigate(`/kravix/post/${dbPost.$id}`);
                 }
             }
         }
@@ -72,12 +74,12 @@ const PostForm = ({ post }) => {
 
 
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+        <form onSubmit={handleSubmit(submit)} className="border rounded-md flex flex-col justify-evenly">
+            <div className="p-6 w-full px-2 border-b-2">
                 <Input
                     label="Title :"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 text-white"
                     {...register("title", { required: true })}
                 />
                 <Input
@@ -91,11 +93,11 @@ const PostForm = ({ post }) => {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-full p-4">
                 <Input
                     label="Featured Image :"
                     type="file"
-                    className="mb-4"
+                    className="mb-6 p-4 border"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
@@ -114,7 +116,7 @@ const PostForm = ({ post }) => {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-gray-700 text-slate-50 transition-all hover:bg-slate-900 hover:border hover:border-green-500 hover:font-bold" : undefined} className="w-full">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

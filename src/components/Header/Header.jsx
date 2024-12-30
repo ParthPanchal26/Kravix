@@ -12,27 +12,27 @@ const Header = () => {
   const navItems = [
     {
       name: 'Home',
-      slug: '/',
+      slug: '/kravix/',
       active: true
     },
     {
       name: 'Login',
-      slug: '/login',
+      slug: '/kravix/login',
       active: !authStatus
     },
     {
       name: 'Signup',
-      slug: '/signup',
+      slug: '/kravix/signup',
       active: !authStatus
     },
     {
       name: 'All Posts',
-      slug: 'all-posts',
+      slug: '/kravix/all-posts',
       active: authStatus
     },
     {
       name: 'Add Post',
-      slug: 'add-post',
+      slug: '/kravix/add-post',
       active: authStatus
     }
   ]
@@ -52,7 +52,7 @@ const Header = () => {
       <Container>
         <nav className="flex items-center justify-between">
           <div className="mr-4 flex items-center">
-            <Link to='/'>
+            <Link to='/kravix/'>
               <Logo width='70px' />
             </Link>
           </div>
