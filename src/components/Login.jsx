@@ -26,6 +26,7 @@ const Login = () => {
                     dispatch(authLogin(userData))
                     navigate('/kravix/')
                 }
+                navigate('/kravix/')
             }
         } catch (error) {
             setError(error.message)
