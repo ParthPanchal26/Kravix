@@ -5,10 +5,6 @@ import authService from './appwrite/auth'
 import { login, logout } from './features/authSlice/authSlice';
 import { Header, Footer } from '../src/components/index.js'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import AllPosts from './pages/AllPosts.jsx';
-import Home from './pages/Home.jsx';
-import Post from './pages/Post.jsx';
-import AddPost from './pages/AddPost.jsx';
 
 function App() {
 
