@@ -17,7 +17,7 @@ const isGitHubPages = import.meta.env.VITE_NODE_ENV === "production";
 const basePath = "/kravix";
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/kravix/",
         element: <App />,
         children: [
             {
